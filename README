@@ -1,0 +1,74 @@
+-------------------------------------------------------------------------------
+
+                              ASSIGNMENT 1 README                              
+                              COGS121 Spring 2016                              
+       Allan Asis, Hui Chen, Gabriel Gaddi, Michelle Nguyen, Alicia Ning       
+
+-------------------------------------------------------------------------------
+
+[ HEURISTICS ] ----------------------------------------------------------------
+
+	1.  Visibility of system status
+
+		The interface provides the user with several text prompts to guide
+		them through each step in the process of adding a new post. The text
+		box contains placeholder text with clear instructions for next steps,
+		and the button for adding audio also communicates its purpose to the
+		user.
+		The user can hit enter/return to send their post, but there is also
+		a "post" button to further clarify current status.
+
+	2.  Match between system and real world
+
+		The app uses terms familiar to the user and avoids technical terms.
+		Users can "like", "dislike", and "comment" on posts -- terms that are
+		commonly used in other social media sites.
+		Posts appear as a vertical timeline with most recent posts on top and
+		older posts further down, so that users may easily stay up-to-date.
+
+	3.  User control and freedom
+
+		Users can easily modify and delete any text they put in the text box.
+		Should the user delete all text they put in the box, the placeholder
+		text will appear again to indicate their status.
+		The user can also toggle the audio upload by simply clicking the + 
+		button -- so if the user decides not to upload audio with their post 
+		after all, they can simply click the audio upload off.
+		Users are also given the option to delete their own posts.
+
+	4.  Consistency and standards
+
+		
+
+	5.  Error prevention
+
+		aaaaaaaaa
+
+	6.  Recognition rather than recall
+	
+		sdffffffffff
+
+	7.  Flexibility and efficiency of use
+
+		skfjdskfafda
+
+	8.  Aesthetic and minimalist design
+	
+		sds
+
+	9.  Recognize, diagnose, and recover from errors
+
+		aiya
+
+	10. Help and documentation
+
+		mhm
+
+
+[ CONTRIBUTIONS ] -------------------------------------------------------------
+
+	Allan:		a
+	Veronica:	a
+	Gabriel:	a
+	Michelle:	a
+	Alicia:		a
