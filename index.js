@@ -4,6 +4,21 @@ $(document).ready(function(){
 	var toggle = false;
 	$('.txtthere').hide();
 
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+			$('.scrollup').fadeIn();
+			} else {
+			$('.scrollup').fadeOut();
+			}
+		});
+
+		$('.scrollup').click(function () {
+			$("html, body").animate({
+			scrollTop: 0
+		}, 600);
+		return false;
+	});
+
 	$('.deletepost').click(function(){
 		$(this).parent().hide(200);
 	});
