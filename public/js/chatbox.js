@@ -1,45 +1,30 @@
 (function($) {
+ 
     "use strict";
-    console.log("ALSHFKSJDHGKJFSDHGSKDJFHDAK!!!")
     /* TODO: Start your Javascript code here */
-    var socket = io();
-
-    $('#post').submit(function(){
-        console.log("whatever");
-        return false;
-    });
-/*    socket.on('sidebar', function(profile){
+    var socket =io();
+    socket.on('sidebar', function(profile){
         var parsedData =  profile;
-        console.log("helloooooooooooo2");
-<<<<<<< HEAD
-        console.log("helloooooooooooo" + parsedData);
-        //$('#sidebar').append($('<li>').html(messageTemplate(parsedData)));
-        //function messageTemplate(template) {
-        //var result = '<div class="sidebar">' +
-            //'<img src="' + template.photos[0].value + '" alt="">' +
-           // '</div>';
-        //return result;
-       // }
-    });*/
-        
+ 
         $('#sidebar').append($('<li>').html(messageTemplate(parsedData)));
         function messageTemplate(template) {
         var result = '<div class="sidebar">' +
-            '<img src="' + template.photos[0].value + '" alt="">' +
-            '</div>';
+        '<img src="' + template.photos[0].value + '" alt="">' +
+         '</div>';
         return result;
-        }
+       }
     });
->>>>>>> 4735081b8781838267af74672b20535d3cda2602
-
-  /*  $('#post').submit(function(){
+ 
+    $('#send_message').submit(function(){
+   
         // socket.emit sends out chat message events with attached data. In this case the submitted form data from #user.input
-        socket.emit('chat message', $('#desctxt').val());
-        //$('#messages').append($('<li>').text($('#user_input').val()));
-        $('#desctxt').val('');
-        console.log("hello");
-         //$('#messages').append($('<li>').html(messageTemplate(parsedData)));
-        return false;
+        socket.emit('chat message', $('#user_input').val());
+        
+        $('#messages').append($('<li>').text($('#user_input').val()));
+        $('#user_input').val('');
+     
+         $('#messages').append($('<li>').html(messageTemplate(parsedData)));
+    return false;
          // grab and parse data and assign it to the parsedData variable.
         //updating new message
         function messageTemplate(template) {
@@ -57,13 +42,13 @@
 
             return result;
         }
-        
-    });*/
-    /*socket.on('new message', function(msg){
+       
+    });
+    socket.on('new message', function(msg){
         var parsedData =  msg;
-        //$('#messages').append($('<li>').text(msg));
+        $('#messages').append($('<li>').text(msg));
         $('#messages').append($('<li>').html(messageTemplate(parsedData)));
-        console.log("helloooooooooooo " + parsedData.message)
+    
         function messageTemplate(template) {
         var result = '<div id="sidebar">' +
             '<div class="myname"> ' +
@@ -71,7 +56,7 @@
             '</div>' +
             '<div class="user-info">' +
             '<span class="username">' + template.user + '</span><br/>' +
-            //'<span class="posted">' + template.posted + '</span>' +
+            '<span class="posted">' + template.posted + '</span>' +
             '</div>' +
             '</div>' +
             '<div class="message-content">' + template.message +
@@ -79,7 +64,7 @@
         return result;
         }
    
-    });*/
+    });
    
    
 })($);

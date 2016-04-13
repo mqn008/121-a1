@@ -151,6 +151,7 @@ io.on('connection', function(socket){
 	io.emit('sidebar', clientUser);
     //socket.on looks to receive "chat message events being emitted from the client"
   	socket.on('chat message', function(msg){
+    
   	var clientUser = socket.request.session.passport.user;
     try{ 
     	var date = new Date().toLocaleString('en-US');
@@ -168,7 +169,7 @@ io.on('connection', function(socket){
     //console.log("before emitting newsfeed signal") ;
     io.emit("new message", msg);
 
-    console.log("after emitting newsfeed signal") ;	
+
     }
     catch(err){
     	console.log("error at socket.on:"  + err);
