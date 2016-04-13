@@ -61,7 +61,7 @@ body {
 	position: relative;
 	width: 550px;
 	margin: 25px auto 0px auto;
-	padding: 0px 0px 25px 0px;
+	padding-bottom: 20px;
 	clear: both;
 	font-family: arial;
 	font-size: 14px;
@@ -87,23 +87,16 @@ body {
 }
 
 .description {
-	padding-bottom: 5px;
+	padding: 0px;
 }
 
 .music {
 	text-decoration: none;
-	text-transform: lowercase;
 	color: #006699;
 }
 
 .music:hover {
 	text-decoration: underline;
-}
-
-.interact {
-	clear: both;
-	width: 460px;
-	padding: 5px 0px 0px 75px;
 }
 
 .clear {
@@ -269,3 +262,6 @@ body {
 	text-decoration: none;
 	color: #006699;
 }
+
+.toshow { display: block; }
+.tounshow { display: none; }

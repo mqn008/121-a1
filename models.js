@@ -13,8 +13,11 @@ var newsFeedSchema = mongoose.Schema({
     "photo": String,
     "message": String,
     "posted": Date,
-    "displayName": String
+    "displayName": String,
+    "url": String,
+    "titles": String,
+    "toShow": String
 });
 
 exports.User = mongoose.model('users1', userSchema);
-exports.newsFeed = mongoose.model('newsfeed1',newsFeedSchema);
+exports.newsFeed = mongoose.model('newsfeed2',newsFeedSchema);

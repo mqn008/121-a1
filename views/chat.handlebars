@@ -58,41 +58,21 @@
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ENTRIES START HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
 		<div id="tweets">
-			<ul class="entry">
-				<li>
-					<img src="./img/icon01.png" class="icon"/>
-					<div class="deletepost">+</div>
-					<div class="text">
-						<span class="name">pldlover69</span>
-						<span class="at">@circleofscorn</span>
-						<div class="description">listened to this song, liked it, you should listen to it too idk how long does this go for who knows meh meh meh</div>
-						<b>listen:</b> <a href="https://www.youtube.com/watch?v=Vhr2mLhmdR4" class="music">Steel Reason - FFXIV OST</a>
-					</div>
 
-					<div class="interact">
-					LIKE DISLIKE COMMENT
-					</div>
-				</li>
-			</ul>
-
-		{{#each newsfeed}}
+		{{#each newsfeed2}}
 			<div class="entry">
 				<img src="{{photo}}" class="icon"/>
-				<div class="deletepost">+</div>
 
 				<div class="text">
 					<span class="name">{{displayName}}</span>
 					<span class="at">@{{user}}</span>
-					<div class="description">listened to this song, liked it, you should listen to it too idk how long does this go for who knows meh meh meh</div>
-					<b>listen:</b> <a href="https://www.youtube.com/watch?v=Vhr2mLhmdR4" class="music">Steel Reason - FFXIV OST</a>
+					<div class="description">{{message}}</div>
+					<div class="{{toShow}}"><b>listen:</b> <a href="{{url}}" class="music">{{titles}}</a></div>
 				</div>
-
-				<div class="interact">
-					LIKE DISLIKE COMMENT
-				</div>
-
+				<div class="clear"></div>
 			</div>
 		{{/each}}
+		
 		</div>
 
 	</div>

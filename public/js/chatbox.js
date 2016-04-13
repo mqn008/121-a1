@@ -18,40 +18,55 @@
         return result;
         }
     });
-    console.log("herlp");
-     $('#post').submit(function(){
+    
+    //console.log("herlp");
+    $('#post').submit(function(){
+        var show = '';
         //console.log($('#user_input').val());
         // socket.emit sends out chat message events with attached data. In this case the submitted form data from #user.input
-        socket.emit('post submit', $('#user_input').val());
-
+        if( $('#user_input').val() == "") return false;
+        if( $('#url').val() == '' || $('#title').val() == '') show = "tounshow";
+        else show = "toshow";
+ 
+        socket.emit('post submit', {"mesg": $('#user_input').val(), "url": $('#url').val(), "titles": $('#title').val(), "toshow": show});
         $('#user_input').val('');
-    return false;
+        $('#url').val('');
+        $('#title').val('');
+
+        return false;
     });
 
-     socket.on('new message', function(message_content){
+    socket.on('new message', function(message_content){
         //console.log('helloooooooooooo from new message socket');
         var parsedData =  message_content;
-        $('#tweets').prepend(messageTemplate(message_content));
-        console.log('helloooooooooooo from new message socket');
+        var results = messageTemplate(parsedData);
+
+        //console.log(parsedData.url + " and " + parsedData.titles);
+        console.log(parsedData);
+        console.log(results);
+
+        var results = $(results);
+        $('#tweets').prepend(results);
+
+        //console.log('helloooooooooooo from new message socket');
+
         function messageTemplate(template) {
-        var result = '<hr>' + 
-            '<div class="icon">' +
-                '<img src="' + template.photo + '" alt="">' +
-            '</div>' +
-            '<div class="deletepost">' + '+' + '</div>' + 
-            '<div class="text">' +
+            var result = '<div class="entry">' +
+                '<img src="' + template.photo + '" class="icon"/>' +
+                '<div class="text">' +
+                    '<span class="name">' + template.displayName + '</span>' +
+                    '<span class="at">@' + template.user + '</span>' +
+                    '<div class="description">' + template.message + '</div>' +
+                    '<div class="' + template.toShow + '"><b>listen:</b> <a href="' + template.url + '" class="music">' + template.titles + '</a></div>' +
+                '</div>' + 
+                '<div class="clear"></div>' +
+            '</div>';
 
-                '<span class="username">' + template.user + '</span>' +
-                '<span class="at">' + ' @' + template.user + '</span>' +
-                '<div class="description">' + template.message + '</div>' + 
-                '<b>' + 'listen: ' + '</b>' +
-                '<a href="https://www.youtube.com/watch?v=Vhr2mLhmdR4" class="music">'+ 'Steel Reason - FFXIV OST' + '</a>' +
-                '</div>' + //for text div
-            '<div class="interact">' + 'LIKE DISLIKE COMMENT' + '</div>';
-        return result;
-} 
-     });
+            return result;
+        } 
 
+    });
+    
 
 })($);
 

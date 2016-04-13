@@ -157,9 +157,12 @@ io.on('connection', function(socket){
     	var message = new models.newsFeed({
     		"user": clientUser.username,
     		"photo": clientUser.photos[0].value,
-    		"message": msg,
+    		"message": msg.mesg,
     		"posted": date,
-            "displayName": clientUser.displayName
+            "displayName": clientUser.displayName,
+            "url": msg.url,
+            "titles": msg.titles,
+            "toShow": msg.toshow
     	});
 
     	

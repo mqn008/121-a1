@@ -1,14 +1,14 @@
 var models = require("../models");
 
 exports.view = function(req, res) {
-	var data = {newsfeed: [],user: []};
-	models.newsFeed.find(function(err,newsfeed1){
+	var data = {"newsfeed2": [], "user": []};
+	models.newsFeed.find(function(err,newsfeed2){
 		if(err) return console.log(err);
-	}).sort({created: 'desc'}).exec(renderProjects);
+	}).sort({posted: 'desc'}).exec(renderProjects);
 	//console.log("------------start---------------------------------");
 	//console.log(data);
-	function renderProjects(err, newsfeed1) {
-        res.render('chat', { 'newsfeed': newsfeed1 });
+	function renderProjects(err, newsfeed2) {
+        res.render('chat', { 'newsfeed2': newsfeed2 });
         //'newsfeed' is the one for the chat.handlebars
         // the :newsfeed is passing the entire sorted collection to 'newsfeed'
     };
