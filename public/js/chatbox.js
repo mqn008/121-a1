@@ -5,14 +5,14 @@
     socket.on('sidebar', function(profile){
         var parsedData =  profile;
         console.log("helloooooooooooo2");
-        console.log("helloooooooooooo" + parsedData);
-        //$('#sidebar').append($('<li>').html(messageTemplate(parsedData)));
-        //function messageTemplate(template) {
-        //var result = '<div class="sidebar">' +
-            //'<img src="' + template.photos[0].value + '" alt="">' +
-           // '</div>';
-        //return result;
-       // }
+        
+        $('#sidebar').append($('<li>').html(messageTemplate(parsedData)));
+        function messageTemplate(template) {
+        var result = '<div class="sidebar">' +
+            '<img src="' + template.photos[0].value + '" alt="">' +
+            '</div>';
+        return result;
+        }
     });
 
     $('#send_message').submit(function(){
