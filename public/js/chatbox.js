@@ -23,7 +23,6 @@
         //console.log($('#user_input').val());
         // socket.emit sends out chat message events with attached data. In this case the submitted form data from #user.input
         socket.emit('post submit', $('#user_input').val());
-        $('#messages').append($('<li>').text($('#user_input').val()));
         $('#user_input').val('');
     return false;
     });
