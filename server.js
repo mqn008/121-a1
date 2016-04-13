@@ -2,7 +2,6 @@
 const express = require("express");
 var handlebars  = require('express-handlebars');
 const app = express();
-global.myuser = app;
 const http = require("http").createServer(app);
 const io = require("socket.io")(http);
 const path = require("path");

@@ -12,9 +12,7 @@
 	</div>
 
 	<div id="sidebar">
-	 	<img src="{{user.photo}}" id="myicon"/>
-		<div class="myname">{{user.displayName}}</div>
-		<div class="myat">@{{user.username}}</div>
+	 	<div id="appenduser"></div>
 		<div class="recent">your recent posts:
 			<div class="myentry">
 				<div class="mytxt">
@@ -62,7 +60,7 @@
 		<div id="tweets">
 			<ul class="entry">
 				<li>
-					<img src="{{icon}}" class="icon"/>
+					<img src="./img/icon01.png" class="icon"/>
 					<div class="deletepost">+</div>
 					<div class="text">
 						<span class="name">pldlover69</span>
@@ -76,15 +74,15 @@
 					</div>
 				</li>
 			</ul>
-<!--
+
 		{{#each newsfeed}}
 			<div class="entry">
-				<img src="{{icon}}" class="icon"/>
+				<img src="{{photo}}" class="icon"/>
 				<div class="deletepost">+</div>
 
 				<div class="text">
-					<span class="name">{{name}}</span>
-					<span class="at">@{{at}}</span>
+					<span class="name">{{displayName}}</span>
+					<span class="at">@{{user}}</span>
 					<div class="description">listened to this song, liked it, you should listen to it too idk how long does this go for who knows meh meh meh</div>
 					<b>listen:</b> <a href="https://www.youtube.com/watch?v=Vhr2mLhmdR4" class="music">Steel Reason - FFXIV OST</a>
 				</div>
@@ -95,9 +93,9 @@
 
 			</div>
 		{{/each}}
-	</div>
--->
 		</div>
+
+	</div>
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! END ENTRIES !!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 		
 	
