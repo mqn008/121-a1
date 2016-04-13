@@ -1,14 +1,6 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-	<script src="./js/socket.io.min.js"></script>
-	<script src="./js/index.js"></script>
-	
-	<script src="./js/search.js"></script>
-	
-	<script src="./js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -20,7 +12,7 @@
 	</div>
 
 	<div id="sidebar">
-	 	<!--<img src="{{user.photo}}" id="myicon"/>-->
+	 	<img src="{{user.photo}}" id="myicon"/>
 		<div class="myname">{{user.displayName}}</div>
 		<div class="myat">@{{user.username}}</div>
 		<div class="recent">your recent posts:
@@ -57,60 +49,63 @@
 
 	<div id="content">
 
-		<form id="send_message" >
-			<input type="text" name="user_input" class="txthere" placeholder="Type your message, attach music, and click post!"/>
-			<button type="submit" class="posthere">post!</button>
+		<form id="post" >
+			<input type="text" id="user_input" class="txthere" placeholder="Type your message, attach music, and click post!"/><button type="submit" class="posthere">post!</button>
 
 			<div class="addmusic">
-				<div class="toggle">+</div><div class="toggletxt">click '+' to add a song!</div>
-				<input type="text" name="url" class="txtthere" placeholder="music URL">
-				<input type="text" name="title" class="txtthere" placeholder="song title">
+				<div class="toggle">+</div><div class="toggletxt">click '+' to add a song!</div><input type="text" id="url" class="txtthere" placeholder="music URL"><input type="text" id="title" class="txtthere" placeholder="song title">
 			</div>
 		</form>
 
-	<script src="./js/chatbox.js"></script>
-
-
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ENTRIES START HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-		
-		<div class="entry">
-			<img src="icon01.png" class="icon"/>
-			<div class="deletepost">+</div>
+		<div id="tweets">
+			<div class="entry">
+				<img src="./img/icon01.png" class="icon"/>
+				<div class="deletepost">+</div>
 
-			<div class="text">
-				<span class="name">pldlover69</span>
-				<span class="at">@circleofscorn</span>
-				<div class="description">listened to this song, liked it, you should listen to it too idk how long does this go for who knows meh meh meh</div>
-				<b>listen:</b> <a href="https://www.youtube.com/watch?v=Vhr2mLhmdR4" class="music">Steel Reason - FFXIV OST</a>
+				<div class="text">
+					<span class="name">pldlover69</span>
+					<span class="at">@circleofscorn</span>
+					<div class="description">listened to this song, liked it, you should listen to it too idk how long does this go for who knows meh meh meh</div>
+					<b>listen:</b> <a href="https://www.youtube.com/watch?v=Vhr2mLhmdR4" class="music">Steel Reason - FFXIV OST</a>
+				</div>
+
+				<div class="interact">
+					LIKE DISLIKE COMMENT
+				</div>
+
 			</div>
 
-			<div class="interact">
-				LIKE DISLIKE COMMENT
+		{{#each newsfeed}}
+			<div class="entry">
+				<img src="{{icon}}" class="icon"/>
+				<div class="deletepost">+</div>
+
+				<div class="text">
+					<span class="name">{{name}}</span>
+					<span class="at">@{{at}}</span>
+					<div class="description">listened to this song, liked it, you should listen to it too idk how long does this go for who knows meh meh meh</div>
+					<b>listen:</b> <a href="https://www.youtube.com/watch?v=Vhr2mLhmdR4" class="music">Steel Reason - FFXIV OST</a>
+				</div>
+
+				<div class="interact">
+					LIKE DISLIKE COMMENT
+				</div>
+
 			</div>
-
-		</div>
-
-	{{#each newsfeed}}
-		<div class="entry">
-			<img src="{{icon}}" class="icon"/>
-			<div class="deletepost">+</div>
-
-			<div class="text">
-				<span class="name">{{name}}</span>
-				<span class="at">@{{at}}</span>
-				<div class="description">listened to this song, liked it, you should listen to it too idk how long does this go for who knows meh meh meh</div>
-				<b>listen:</b> <a href="https://www.youtube.com/watch?v=Vhr2mLhmdR4" class="music">Steel Reason - FFXIV OST</a>
-			</div>
-
-			<div class="interact">
-				LIKE DISLIKE COMMENT
-			</div>
-
-		</div>
-	{{/each}}
+		{{/each}}
+	</div>
 
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! END ENTRIES !!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 		
 	</div>
+
+
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/socket.io.min.js"></script>
+<script src="./js/chatbox.js"></script>
+<script src="./js/search.js"></script>
+<script src="./js/index.js"></script>
 
 </body>
