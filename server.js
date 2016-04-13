@@ -148,9 +148,9 @@ io.use(function(socket, next) {
 /* TODO: Server-side Socket.io here */
 io.on('connection', function(socket){
     var clientUser = socket.request.session.passport.user;
-	io.emit('sidebar', clientUser);
-    //socket.on looks to receive "chat message events being emitted from the client"
-  	socket.on('chat message', function(msg){
+	socket.emit('sidebar', clientUser);
+    //socket.on looks to receive "post submit events being emitted from the client"
+  	socket.on('post submit', function(msg){
     
   	var clientUser = socket.request.session.passport.user;
     try{ 
@@ -167,7 +167,7 @@ io.on('connection', function(socket){
 
     message.save();
     //console.log("before emitting newsfeed signal") ;
-    io.emit("new message", msg);
+    socket.emit("new message", message);
 
 
     }
