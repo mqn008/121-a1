@@ -111,8 +111,8 @@ body {
 }
 
 .txthere {
-	width: 422px;
-	padding: 10px 20px 10px 20px;
+	width: 480px;
+	padding: 20px;
 	height: 20px;
 	line-height: 20px;
 	font-size: 14px;
@@ -156,7 +156,7 @@ body {
 }
 
 .txtthere {
-	width: 207px;	
+	width: 217px;	
 	padding: 5px 15px 5px 15px;
 	font-size: 12px;
 	border: 1px solid #cccccc;
