@@ -17,6 +17,8 @@
 		user.
 		The user can hit enter/return to send their post, but there is also
 		a "post" button to further clarify current status.
+		When the user scrolls down their post timeline, a clickable option
+		appears to scroll back to the top.
 
 	2.  Match between system and real world
 
@@ -38,23 +40,36 @@
 
 	4.  Consistency and standards
 
-		
+		Terms are kept clear and consistent throughout the app's interface to
+		avoid confusion.
+		The app does not contain any complex or specific terminology that the
+		user would not already be familiar with from other social media sites.
 
 	5.  Error prevention
 
-		aaaaaaaaa
+		The user can delete their own mistaken posts.
+		Given more time and resources, we would also implement a check to 
+		ensure that the user-input URL is a valid url.
 
 	6.  Recognition rather than recall
 	
-		sdffffffffff
+		Placeholder text and other text instructions are always easily
+		retrievable for the user. If there is nothing in the post text box, the
+		place holder text will be visible. The text prompt to upload an audio 
+		post is also available with a single click.
+		Most of the information is displayed with a single look at the page, 
+		so the user will not lose information when travelling between pages.
 
 	7.  Flexibility and efficiency of use
 
-		skfjdskfafda
+		Posts can be made either by pressing enter or by pressing the post 
+		button. Frequent users who are more familiar with the interface may 
+		prefer the former while the latter is always available to users less 
+		familiar with the functionality.
 
 	8.  Aesthetic and minimalist design
 	
-		sds
+		
 
 	9.  Recognize, diagnose, and recover from errors
 
