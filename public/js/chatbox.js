@@ -23,7 +23,7 @@
         //console.log($('#user_input').val());
         // socket.emit sends out chat message events with attached data. In this case the submitted form data from #user.input
         socket.emit('post submit', $('#user_input').val());
-        $('#messages').append($('<li>').text($('#user_input').val()));
+        //? $('#tweets').prepend($('<li>').text($('#user_input').val()));
         $('#user_input').val('');
     return false;
     });
@@ -31,7 +31,7 @@
      socket.on('new message', function(message_content){
         //console.log('helloooooooooooo from new message socket');
         var parsedData =  message_content;
-        $('.entry').append($('<li>').html(messageTemplate(message_content)));
+        $('#tweets').prepend(messageTemplate(message_content));
         console.log('helloooooooooooo from new message socket');
         function messageTemplate(template) {
         var result = '<hr>' + 
@@ -45,8 +45,8 @@
                 '<span class="at">' + ' @' + template.user + '</span>' +
                 '<div class="description">' + template.message + '</div>' + 
                 '<b>' + 'listen: ' + '</b>' +
-            '</div>' + //for text div
-            '<a href="https://www.youtube.com/watch?v=Vhr2mLhmdR4" class="music">'+ 'Steel Reason - FFXIV OST' + '</a>' +
+                '<a href="https://www.youtube.com/watch?v=Vhr2mLhmdR4" class="music">'+ 'Steel Reason - FFXIV OST' + '</a>' +
+                '</div>' + //for text div
             '<div class="interact">' + 'LIKE DISLIKE COMMENT' + '</div>';
         return result;
 } 
