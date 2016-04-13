@@ -1,8 +1,6 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/socket.io.min.js"></script>
 	<script src="./js/chatbox.js"></script>
@@ -55,11 +53,11 @@
 
 	<div id="content">
 
-		<form id="post">
-			<input type="text" name="desc" class="txthere" placeholder="Type your message, attach music, and click post!"/><button type="button" class="posthere">post!</button>
+		<form id="post" action="">
+			<input type="text" class="txthere" id="desctxt" placeholder="Type your message, attach music, and click post!"><button type="submit" class="posthere" form="post">post!</button>
 
 			<div class="addmusic">
-				<div class="toggle">+</div><div class="toggletxt">click '+' to add a song!</div><input type="text" name="url" class="txtthere" placeholder="music URL"><input type="text" name="title" class="txtthere" placeholder="song title">
+				<div class="toggle">+</div><div class="toggletxt">click '+' to add a song!</div><input type="text" class="txtthere" placeholder="music URL"><input type="text" class="txtthere" placeholder="song title">
 			</div>
 		</form>
 
@@ -69,7 +67,7 @@
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ENTRIES START HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 		
 		<div class="entry">
-			<img src="icon01.png" class="icon"/>
+			<img src="./img/icon01.png" class="icon"/>
 			<div class="deletepost">+</div>
 
 			<div class="text">
@@ -85,24 +83,7 @@
 
 		</div>
 
-	{{#each newsfeed}}
-		<div class="entry">
-			<img src="{{icon}}" class="icon"/>
-			<div class="deletepost">+</div>
 
-			<div class="text">
-				<span class="name">{{name}}</span>
-				<span class="at">@{{at}}</span>
-				<div class="description">listened to this song, liked it, you should listen to it too idk how long does this go for who knows meh meh meh</div>
-				<b>listen:</b> <a href="https://www.youtube.com/watch?v=Vhr2mLhmdR4" class="music">Steel Reason - FFXIV OST</a>
-			</div>
-
-			<div class="interact">
-				LIKE DISLIKE COMMENT
-			</div>
-
-		</div>
-	{{/each}}
 
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! END ENTRIES !!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 		

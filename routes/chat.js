@@ -1,11 +1,10 @@
 var models = require("../models");
 
-
 exports.view = function(req, res) {
 	var data = {newsfeed: [],user: []};
-	models.newsFeed.find(function(err,newsfeed){
+	models.newsFeed.find(function(err,newsfeed1){
 		if(err) return console.log(err);
-		data.newsfeed = newsfeed;
+		data.newsfeed = newsfeed1;
 		data.user = global.myuser.get('myuser');
 		res.render('chat',data);
 	});

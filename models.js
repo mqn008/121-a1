@@ -16,5 +16,5 @@ var newsFeedSchema = mongoose.Schema({
     "displayName": String
 });
 
-exports.User = mongoose.model('users', userSchema);
-exports.newsFeed = mongoose.model('newsfeed',newsFeedSchema);
+exports.User = mongoose.model('users1', userSchema);
+exports.newsFeed = mongoose.model('newsfeed1',newsFeedSchema);

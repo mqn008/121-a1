@@ -152,7 +152,7 @@ io.on('connection', function(socket){
     //socket.on looks to receive "chat message events being emitted from the client"
   	socket.on('chat message', function(msg){
   	var clientUser = socket.request.session.passport.user;
-    try{
+    try{ 
     	var date = new Date().toLocaleString('en-US');
     	var message = new models.newsFeed({
     		"user": clientUser.username,
