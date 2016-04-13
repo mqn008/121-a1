@@ -11,6 +11,7 @@
 /*    socket.on('sidebar', function(profile){
         var parsedData =  profile;
         console.log("helloooooooooooo2");
+<<<<<<< HEAD
         console.log("helloooooooooooo" + parsedData);
         //$('#sidebar').append($('<li>').html(messageTemplate(parsedData)));
         //function messageTemplate(template) {
@@ -20,6 +21,16 @@
         //return result;
        // }
     });*/
+        
+        $('#sidebar').append($('<li>').html(messageTemplate(parsedData)));
+        function messageTemplate(template) {
+        var result = '<div class="sidebar">' +
+            '<img src="' + template.photos[0].value + '" alt="">' +
+            '</div>';
+        return result;
+        }
+    });
+>>>>>>> 4735081b8781838267af74672b20535d3cda2602
 
   /*  $('#post').submit(function(){
         // socket.emit sends out chat message events with attached data. In this case the submitted form data from #user.input
