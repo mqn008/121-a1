@@ -90,8 +90,24 @@
 
 [ CONTRIBUTIONS ] -------------------------------------------------------------
 
-	Allan:		a
-	Veronica:	a
-	Gabriel:	a
-	Michelle:	a
-	Alicia:		a
+	Allan:		
+		Completed Part 1 for better understanding. Implemented socket and the 
+		database to save data and use that data in the html. Helping with 
+		error checking for part 2.
+
+	Veronica:	
+		Worked on Part 1 as well along with Allan. Helped with error checking 
+		and fixing.
+
+	Gabriel:	
+		Worked on Part 1 as well along with Allan. Helped with error checking 
+		and fixing.
+
+	Michelle:	
+		Worked mostly on front-end. Worked on the design for Part 2 and 
+		followed heuristic elements. 
+
+	Alicia:
+		Worked alongside Michelle on the front-end. Made sure design followed 
+		heuristic features. Filled out the heuristics report. Contributed 
+		any visuals needed for application.
