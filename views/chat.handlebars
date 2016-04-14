@@ -14,6 +14,17 @@
 	<div id="sidebar">
 	 	<div id="appenduser"></div>
 		<div class="recent">your recent posts:
+		{{#each sidedata}}
+			<div class="myentry">
+				<div class="mytxt">
+					{{message}}
+				</div>
+				<div class="{{toShow}}"><b>listen:</b> <a href="{{url}}" class="music">{{titles}}</a></div>
+			</div>
+				
+		{{/each}}
+		</div>
+		<!--
 			<div class="myentry">
 				<div class="mytxt">
 					listened to this song, liked it, you should listen t o it too idk how long does this go for who knows meh meh meh
@@ -21,23 +32,8 @@
 				<span class="listen">listen:</span>
 				<a href="https://www.youtube.com/watch?v=Vhr2mLhmdR4" class="mysong">steel reason - ffxiv ost</a>
 			</div>
-
-			<div class="myentry">
-				<div class="mytxt">
-					listened to this song, liked it, you should listen to it too idk how long does this go for who knows meh meh meh
-				</div>
-				<span class="listen">listen:</span>
-				<a href="https://www.youtube.com/watch?v=Vhr2mLhmdR4" class="mysong">steel reason - ffxiv ost</a>
-			</div>
-
-			<div class="myentry">
-				<div class="mytxt">
-					listened to this song, liked it, you should listen to it too idk how long does this go for who knows meh meh meh
-				</div>
-				<span class="listen">listen:</span>
-				<a href="https://www.youtube.com/watch?v=Vhr2mLhmdR4" class="mysong">steel reason - ffxiv ost</a>
-			</div>
-		</div>
+			-->
+		
 	</div>
 
 

@@ -65,7 +65,6 @@ app.use(parser.body.json());
 app.use(require('method-override')());
 app.use(session_middleware);
 /* TODO: Passport Middleware Here*/
-
 app.use(passport.initialize());
 app.use(passport.session());
 /* TODO: Use Twitter Strategy for Passport here */
@@ -92,7 +91,6 @@ passport.use(new TwitterStrategy({
     			"photo": profile.photos[0].value.replace('_normal',''),
     			"date": date
         	});
-
         	user.save(afterSaving);
         	function afterSaving(err){
         		return done(null, profile);
@@ -108,6 +106,8 @@ passport.use(new TwitterStrategy({
         		displayName: profile.displayName,
     			photo: profile.photos[0].value.replace('_normal',''),
     			date: date},afterUpdating);
+            
+            
         	function afterUpdating(err){
         		return done(null, profile);
         	}

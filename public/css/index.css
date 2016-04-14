@@ -19,6 +19,7 @@ body {
 	z-index: 2;
 	padding: 50px 20px 0px 0px;
 	border-right: 1px solid #cccccc;
+	overflow: auto;
 }
 
 #content {
@@ -68,6 +69,7 @@ body {
 	color: #000000;
 	line-height: 130%;
 	border-bottom: #cccccc 1px solid;
+
 }
 
 .text {
@@ -88,6 +90,7 @@ body {
 
 .description {
 	padding: 0px;
+	overflow: none;
 }
 
 .music {
@@ -218,8 +221,7 @@ body {
 .recent {
 	clear: both;
 	font-family: arial;
-	font-size: 18px;
-	font-weight: bold;
+	font-size: 12px;
 	margin: 30px 0px 0px 10px;
 	color: #000000;	
 }
@@ -227,6 +229,8 @@ body {
 .myentry {
 	padding: 10px;
 	border-bottom: 1px solid #cccccc;
+	width: 19.23076923076923em;
+	height: 3.4615384615384617em;
 }
 
 .mytxt {
