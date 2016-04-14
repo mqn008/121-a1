@@ -69,15 +69,23 @@
 
 	8.  Aesthetic and minimalist design
 	
-		
+		The app has a simple interface with the majority of the text being 
+		provided by the user. Any other information presented is solely for 
+		the purpose of instruction and clarification.
 
 	9.  Recognize, diagnose, and recover from errors
 
-		aiya
+		Should the user make a mistaken post, they have the option to delete 
+		it and re-create it.
+		Given more time, we would implement a feature that checks if the URL 
+		provided by the user is valid and warns the user if it is not.
 
 	10. Help and documentation
 
-		mhm
+		Given that the app should be simple and familiar to the user, the help 
+		provided is rather simple and given in the form of instructional 
+		messages placed next to the features they describe (for entering a 
+		message and adding an audio file).
 
 
 [ CONTRIBUTIONS ] -------------------------------------------------------------
