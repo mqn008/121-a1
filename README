@@ -36,7 +36,6 @@
 		The user can also toggle the audio upload by simply clicking the + 
 		button -- so if the user decides not to upload audio with their post 
 		after all, they can simply click the audio upload off.
-		Users are also given the option to delete their own posts.
 
 	4.  Consistency and standards
 
@@ -47,8 +46,7 @@
 
 	5.  Error prevention
 
-		The user can delete their own mistaken posts.
-		Given more time and resources, we would also implement a check to 
+		Given more time and resources, we would implement a check to 
 		ensure that the user-input URL is a valid url.
 
 	6.  Recognition rather than recall
@@ -75,10 +73,10 @@
 
 	9.  Recognize, diagnose, and recover from errors
 
-		Should the user make a mistaken post, they have the option to delete 
-		it and re-create it.
-		Given more time, we would implement a feature that checks if the URL 
-		provided by the user is valid and warns the user if it is not.
+		Should the user make a mistaken post, we planned to give them the 
+		option to delete it and re-create it.
+		Given more time, we would also implement a feature that checks if the 
+		URL provided by the user is valid and warns the user if it is not.
 
 	10. Help and documentation
 
