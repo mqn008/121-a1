@@ -1,8 +1,8 @@
 var models = require("../models");
-
+var data = {user: []};
 
 exports.view = function(req, res) {
-	var data = {user: []};
+	
 	models.newsFeed.find().where('user').equals(req.session.passport.user.username).sort({posted: 'desc'}).exec(function(err,newsfeed2){
 	
 	data = newsfeed2;
